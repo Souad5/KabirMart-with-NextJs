@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Here’s a ready-to-use **GitHub README.md template** for your KabirMart project:
 
-## Getting Started
+````markdown
+# KabirMart - Next.js E-commerce App
 
-First, run the development server:
+**Live Site:** [https://kabirmart.vercel.app](https://kabirmart.vercel.app)  
+**GitHub Repository:** [https://github.com/Souad5/KabirMart-with-NextJs](https://github.com/Souad5/KabirMart-with-NextJs.git)
+
+---
+
+## Project Description
+
+KabirMart is a simple e-commerce application built with **Next.js 15** (App Router) and **NextAuth.js** for authentication.  
+Users can browse products, view product details, and authenticated users can add new products via a protected dashboard.
+
+**Core Features:**
+- Landing Page with Navbar, Hero, Product Highlights, and Footer  
+- Public Product List and Product Details pages  
+- Google authentication with NextAuth.js  
+- Protected Add Product page (for logged-in users)  
+- Dark/Light mode toggle  
+- API Route handlers for product management  
+
+---
+
+## Setup & Installation
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/Souad5/KabirMart-with-NextJs.git
+cd kabirmart
+````
+
+2. **Install dependencies**
+
+```bash
+npm install
+```
+
+3. **Create `.env.local` file**
+
+```env
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+NEXTAUTH_SECRET=your_random_secure_string
+NEXTAUTH_URL=http://localhost:3000
+```
+
+4. **Run the development server**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. **Open in browser**
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Route Summary
 
-To learn more about Next.js, take a look at the following resources:
+| Route                    | Description                           | Access                                 |
+| ------------------------ | ------------------------------------- | -------------------------------------- |
+| `/`                      | Landing Page                          | Public                                 |
+| `/productslist`          | Product List Page                     | Public                                 |
+| `/productslist/[id]`     | Product Details Page                  | Public                                 |
+| `/login`                 | Login Page (NextAuth.js Google login) | Public                                 |
+| `/dashboard/add-product` | Add Product Page                      | Protected (requires login)             |
+| `/api/products`          | API for fetching/adding products      | Public/Protected (POST requires login) |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Notes
 
-## Deploy on Vercel
+* The backend uses **Next.js Route Handlers** for fetching and creating products.
+* The Add Product form shows **loading spinner** and **toast messages** for better UX.
+* Dark/Light mode is fully supported across pages.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Live Demo
+
+Check out the live site deployed on Vercel: [https://kabirmart.vercel.app](https://kabirmart.vercel.app)
+
+```
+
+---
+
