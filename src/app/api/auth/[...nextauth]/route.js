@@ -32,7 +32,7 @@ const handler = NextAuth({
   },
   callbacks: {
     async redirect({ url, baseUrl }) {
-      return "/products"; // after login redirect
+      return "/productslist"; // after login redirect
     },
   },
 });

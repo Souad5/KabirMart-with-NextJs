@@ -12,7 +12,7 @@ export default function LoginPage() {
     await signIn("credentials", {
       email,
       password,
-      callbackUrl: "/products",
+      callbackUrl: "/productslist",
     });
   };
 
@@ -23,7 +23,7 @@ export default function LoginPage() {
 
         {/* Google Login */}
         <button
-          onClick={() => signIn("google", { callbackUrl: "/products" })}
+          onClick={() => signIn("google", { callbackUrl: "/productslist" })}
           className="btn btn-outline w-full mb-4"
         >
           Sign in with Google
